@@ -7,32 +7,26 @@
 
 <body>
 
-<h2>Disease Prediction System</h2>
+<h1>🩺 Disease Prediction Dashboard</h1>
 
-<label>Name:</label>
-<input type="text" id="name"><br><br>
+<div class="symptoms">
 
-<label>Fever:</label>
-<select id="fever">
-<option>No</option>
-<option>Yes</option>
-</select><br><br>
+<h2>Select Symptoms</h2>
 
-<label>Cough:</label>
-<select id="cough">
-<option>No</option>
-<option>Yes</option>
-</select><br><br>
+<button onclick="predict('fever')">Fever</button>
+<button onclick="predict('cough')">Cough</button>
+<button onclick="predict('headache')">Headache</button>
+<button onclick="predict('stomach')">Stomach Pain</button>
 
-<label>Headache:</label>
-<select id="headache">
-<option>No</option>
-<option>Yes</option>
-</select><br><br>
+</div>
 
-<button onclick="predict()">Predict Disease</button>
+<div class="result">
 
-<h3 id="result"></h3>
+<h2>Predicted Disease</h2>
+
+<p id="output">Select symptoms to see result</p>
+
+</div>
 
 <script src="script.js"></script>
 
