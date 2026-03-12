@@ -1,26 +1,54 @@
 body{
-font-family:Arial;
+font-family: Arial;
 text-align:center;
-background:#f0f0f0;
+background:linear-gradient(to right,#36d1dc,#5b86e5);
+color:white;
 }
 
-.login-box{
-width:300px;
-margin:100px auto;
-padding:20px;
+.loginbody{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.loginbox{
 background:white;
+color:black;
+padding:40px;
 border-radius:10px;
+width:300px;
 }
 
-input,select{
-width:200px;
-padding:8px;
-margin:5px;
+input{
+width:90%;
+padding:10px;
+margin:10px;
 }
 
 button{
 padding:10px 20px;
-background:blue;
-color:white;
+background:#ff4b2b;
 border:none;
+color:white;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#ff416c;
+}
+
+.symptoms{
+margin-top:40px;
+}
+
+.result{
+margin-top:30px;
+background:white;
+color:black;
+display:inline-block;
+padding:20px;
+border-radius:10px;
 }
