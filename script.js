@@ -1,37 +1,35 @@
-function login(){
+function predict(){
 
-var user = document.getElementById("username").value;
-var pass = document.getElementById("password").value;
+var checked = document.querySelectorAll('input[type=checkbox]:checked');
 
-if(user=="admin" && pass=="1234"){
-window.location="dashboard.html";
-}
-else{
-document.getElementById("error").innerHTML="Wrong Username or Password";
-}
+var symptoms = [];
 
-}
+checked.forEach(function(item){
+symptoms.push(item.value);
+});
 
-function predict(symptom){
+var disease="Unknown Disease";
 
-var disease="";
-
-if(symptom=="fever"){
-disease="Possible Disease: Viral Fever";
+if(symptoms.includes("fever") && symptoms.includes("cough") && symptoms.includes("breath")){
+disease="COVID-19";
 }
 
-if(symptom=="cough"){
-disease="Possible Disease: Cold / Flu";
+else if(symptoms.includes("fever") && symptoms.includes("body_pain") && symptoms.includes("chills")){
+disease="Malaria";
 }
 
-if(symptom=="headache"){
-disease="Possible Disease: Migraine";
+else if(symptoms.includes("rash") && symptoms.includes("fever")){
+disease="Dengue";
 }
 
-if(symptom=="stomach"){
-disease="Possible Disease: Food Poisoning";
+else if(symptoms.includes("vomiting") && symptoms.includes("diarrhea") && symptoms.includes("stomach_pain")){
+disease="Food Poisoning";
 }
 
-document.getElementById("output").innerHTML=disease;
+else if(symptoms.includes("headache") && symptoms.includes("nausea")){
+disease="Migraine";
+}
+
+document.getElementById("result").innerHTML="Possible Disease: "+disease;
 
 }
