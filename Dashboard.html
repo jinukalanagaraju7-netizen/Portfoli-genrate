@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Disease Prediction</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Disease Prediction System</h2>
+
+<label>Name:</label>
+<input type="text" id="name"><br><br>
+
+<label>Fever:</label>
+<select id="fever">
+<option>No</option>
+<option>Yes</option>
+</select><br><br>
+
+<label>Cough:</label>
+<select id="cough">
+<option>No</option>
+<option>Yes</option>
+</select><br><br>
+
+<label>Headache:</label>
+<select id="headache">
+<option>No</option>
+<option>Yes</option>
+</select><br><br>
+
+<button onclick="predict()">Predict Disease</button>
+
+<h3 id="result"></h3>
+
+<script src="script.js"></script>
+
+</body>
+</html>
